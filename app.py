@@ -125,7 +125,7 @@ with col1:
 
 # Tabs
 st.write("---")
-tabs = st.tabs(["🏫 College Analysis", "📚 Branch Analysis"])
+tabs = st.tabs(["🏫 College Analysis"])
 
 # Tab 1: College Analysis
 with tabs[0]:
@@ -151,11 +151,11 @@ with tabs[0]:
             st.error("🚫 No data available for the selected category and college.")
 
 # Tab 2: Branch Analysis
-with tabs[1]:
-    st.write("#### 🏅 Explore All Colleges")
-    if selected_category != "--Select--":
-        fallback_categories = fallback_order.get(selected_category, [selected_category])
-        all_colleges_data = df[["College Name", "Branch Name"] + fallback_categories + ["SNQ", "Total"]]
+# with tabs[1]:
+#     st.write("#### 🏅 Explore All Colleges")
+#     if selected_category != "--Select--":
+#         fallback_categories = fallback_order.get(selected_category, [selected_category])
+#         all_colleges_data = df[["College Name", "Branch Name"] + fallback_categories + ["SNQ", "Total"]]
 
-        st.success(f"Displaying seat matrix for **{selected_category}** across all colleges:")
-        st.dataframe(all_colleges_data)
+#         st.success(f"Displaying seat matrix for **{selected_category}** across all colleges:")
+#         st.dataframe(all_colleges_data)
